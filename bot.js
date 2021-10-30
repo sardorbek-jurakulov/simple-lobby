@@ -5,7 +5,20 @@ const bot = new Telegraf('2091225781:AAEWFmV37CttQZuI7FpODXykeB8o7chCL7M'); // t
 //start
 
 bot.start((ctx) => {
-    ctx.reply("You have entered the start command");
+    ctx.reply(ctx.from.first_name + " have entered the start command and it is a " + ctx.updateSubTypes[0]);
+    // console.log(ctx);
+    console.log(ctx.from);
+    console.log(ctx.chat);
+    console.log(ctx.message);
+    console.log(ctx.updateSubTypes);
+});
+
+bot.help((ctx) => {
+    ctx.reply("You have entered the help command");
+});
+
+bot.settings((ctx) => {
+    ctx.reply("You have entered settings command");
 });
 
 bot.launch(); // telegramdagi updatelarni pull qilish uchun ishlatiladi
