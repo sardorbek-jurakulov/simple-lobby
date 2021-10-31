@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "telegraf": "3.32"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
   }
 }
